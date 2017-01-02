@@ -10,28 +10,160 @@
 </head>
 <body>
 <a href="/">Back</a>
+<br>
 <a href="/css3/">Back CSS3</a>
 
 <h1>Visual Examples for Flexbox</h1>
 
-<hr>
-<!-- 1 -->
-<div class="common-view flex-container-1">
-    <div class="flex-element">1</div>
-    <div class="flex-element">2</div>
-    <div class="flex-element">3</div>
+
+<div class="share-content">
+    <div class="wrap">
+        <div class="top-share-fb">
+            <span>Share on Facebook</span>
+        </div>
+        <div class="top-share-text">
+            Some title text. Some title text. Some title text. Some title text. Some title text.
+            Some title text. Some title text. Some title text. Some title text. Some title text.
+            Some title text. Some title text. Some title text. Some title text. Some title text.
+            Some title text. Some title text. Some title text. Some title text. Some title text.
+        </div>
+    </div>
 </div>
-<span class="code-type type-css">CSS:</span>
-<pre>
-.flex-container {
-    <span>display</span>: flex;
-}
-</pre>
+
+<style>
+    .wrap {
+        background-color: #ccc;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .top-share-fb {
+        background-color: #3b5998;
+        border-radius: 3px;
+        padding: 5px 10px;
+        flex: 1;
+        text-align: center;
+        margin-right: 2%;
+    }
+    .top-share-text {
+        flex: 3;
+    }
+</style>
+
+<hr>
+
+<nav>
+    <div class="wrap1">
+        <div class="logo">
+            <div class="ltitle">Logo name</div>
+            <div class="lsub">We make funny page templates</div>
+        </div>
+        <menu>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Other</a></li>
+            <li><a href="#">Contact</a></li>
+        </menu>
+    </div>
+</nav>
+
+<style>
+    nav {
+        background-color: #ccc;
+        padding: 15px;
+    }
+    menu li {
+        list-style: none;
+    }
+    .wrap1 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .logo {
+        flex: 1 1 auto;
+    }
+    menu {
+        display: flex;
+        flex: 3 1 auto;
+        justify-content: space-between;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    menu li {
+        list-style: none;
+        padding: 0 15px;
+    }
+</style>
+
 <hr>
 
 
+<div class="wrap2">
+    <div class="item">
+        <img src="http://runa-odin.narod.ru/gfx/gur/kr3.gif" alt="Ho-ho-ho" />
+        <h2>SmartGit Creative</h2>
+        <p>This is why you will use it</p>
+        <div class="subtitle">
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+        </div>
+    </div>
+    <div class="item">
+        <img src="http://runa-odin.narod.ru/gfx/gur/kr3.gif" alt="Ho-ho-ho" />
+        <h2>SmartGit Creative</h2>
+        <p>This is why you will use it</p>
+        <div class="subtitle">
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+        </div>
+    </div>
+    <div class="item">
+        <img src="http://runa-odin.narod.ru/gfx/gur/kr3.gif" alt="Ho-ho-ho" />
+        <h2>SmartGit Creative</h2>
+        <p>This is why you will use it</p>
+        <div class="subtitle">
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+        </div>
+    </div>
+    <div class="item">
+        <img src="http://runa-odin.narod.ru/gfx/gur/kr3.gif" alt="Ho-ho-ho" />
+        <h2>SmartGit Creative</h2>
+        <p>This is why you will use it</p>
+        <div class="subtitle">
+            This is long or short text. This is long or short text.
+            This is long or short text. This is long or short text.
+        </div>
+    </div>
+</div>
 
-
+<style>
+    .wrap2 {
+        background-color: #ccc;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .item {
+        padding: 15px;
+        flex-basis: 330px;
+    }
+    img {
+        width: 100%;
+    }
+</style>
 
 
 
