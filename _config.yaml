@@ -1,0 +1,17 @@
+title: 'p-12s'
+source:
+destination: '_site'
+url: 'http://p-12s.github.io'
+github_username: p-12s
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  css:
+    output: true
+    permalink: '/css/:path'
+defaults:
+    - scope:
+        type: css
+      values:
+        layout: css
