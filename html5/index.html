@@ -7,19 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML5</title>
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/flexbox.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header">
         <hl>HTML5</hl>
-        <a href="/">Назад</a>
+        <nav class="navigation navigation_header">
+            <a href="/">На главную</a>
+            <a href="/html5/form.html">На главную</a>
+        </nav>
+        <hr>
     </header>
-    <section>
-        <p>Общая схема страницы</p>
+
+    <section class="content content_top">
+        <header>
+            <h2>Общая схема страницы</h2>
+        </header>
         <img src="image/structure.png" alt="Струткура блоков"  class="content-image">
         <hr>
-        
     </section>
+
+    <section class="content content_center">
+        <article>
+            <p>&lt;section&gt; (секции) - для логической группировки контента!<br>
+                В статьях могут использоваться элементы &lt;header&gt; и &lt;footer&gt;, что
+                значительно упрощает описание этих конкретных разделов. Статья может
+                быть разбита на несколько разделов при помощи элемента &lt;section&gt;.</p>
+            <p>&lt;article&gt; (статьи) идеально подходит для описания основного информационного
+                наполнения веб-страницы. Этот контент - цель посетителя</p>
+            <p>&lt;aside&gt; ("в сторону") информация, дополняющая основной
+                контент, — выносные цитаты, диаграммы, дополнительные мысли или
+                сопутствующие ссылки.</p>
+            <hr>
+        </article>
+        <article>
+            <meter value="4500.00" min="0" max="5000.00"
+            title="Информация о ходе выполнения операции"></meter>
+            <p>&lt;meter&gt; - Информация о ходе выполнения операции</p>
+            <hr>
+            <progress min="0" max="100" value="58"></progress>
+            <p>&lt;progress&gt; - Информация для акивногоражения хода выполнения операции</p>
+            <hr>
+            <dl>
+                <dt>FAQ - вопрос</dt>
+                <dd>
+                    <p>FAQ - ответ</p>
+                </dd>
+            </dl>
+            <p>&lt;dt&gt;-&lt;dd&gt; - список FAQ</p>
+            <hr>
+        </article>
+        <article>
+
+            <hr>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright © 2017 p-12s.github.io</p>
+        <nav class="navigation navigation_footer">
+            <a href="/">На главную</a>
+            <a href="#">Тест</a>
+            <a href="#">Тест</a>
+            <a href="#">Тест</a>
+        </nav>
+    </footer>
 </body>
 </html>
 

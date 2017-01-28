@@ -15,7 +15,7 @@
 body {
     font-size: 1.35em;
     font-family: 'Nunito', sans-serif;
-    color: #fff;
+    color: #333;
     background: #e8e9e9;
     padding-left: 5%;
     padding-right: 5%;
@@ -83,13 +83,35 @@ hr {
 .content-image {
     width: 70%;
     margin: 10px auto;
+    display: block;
+}
+.link {
+    display: block;
+}
+.footer {
+    display: flex;
+}
+.navigation.navigation_footer {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.navigation.navigation_footer a {
+    margin-left: 10px;
 }
 
-
-
-
-
-
+.content_left {
+    border: 1px  solid #2a0cc5;
+    flex-direction: column;
+}
+.content_right {
+    border: 1px  solid #2a0cc5;
+    flex-direction: column;
+}
+.article {
+    padding: 10px;
+    border: 1px  solid #333;
+}
 
 
 

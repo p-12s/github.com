@@ -9,5 +9,5 @@ permalink: /html5/
 ##  Новые теги
 
  1. [Новые теги](/html5/index.html)
- 2. [еще что-нибудь](/html5/er.html)
+ 2. [еще что-нибудь](/html5/form.html)
  
