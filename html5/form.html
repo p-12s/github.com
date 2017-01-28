@@ -1,60 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML5 Form</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header class="header">
     <hl>HTML5</hl>
     <nav class="navigation navigation_header">
         <a href="/">На главную</a>
-        <a href="/html5/">Новые теги</a>
+        <a href="/html5/">Новые теги HTML5</a>
     </nav>
     <hr>
 </header>
 
-<section class="content content_top">
-    <header>
-        <h2>Общая схема страницы</h2>
-    </header>
-    <img src="image/structure.png" alt="Струткура блоков"  class="content-image">
-    <hr>
-</section>
-
 <section class="content content_center">
     <article>
-        <p>&lt;section&gt; (секции) - для логической группировки контента!<br>
-            В статьях могут использоваться элементы &lt;header&gt; и &lt;footer&gt;, что
-            значительно упрощает описание этих конкретных разделов. Статья может
-            быть разбита на несколько разделов при помощи элемента &lt;section&gt;.</p>
-        <p>&lt;article&gt; (статьи) идеально подходит для описания основного информационного
-            наполнения веб-страницы. Этот контент - цель посетителя</p>
-        <p>&lt;aside&gt; ("в сторону") информация, дополняющая основной
-            контент, — выносные цитаты, диаграммы, дополнительные мысли или
-            сопутствующие ссылки.</p>
-        <hr>
-    </article>
-    <article>
-        <meter value="4500.00" min="0" max="5000.00"
-               title="Информация о ходе выполнения операции"></meter>
-        <p>&lt;meter&gt; - Информация о ходе выполнения операции</p>
-        <hr>
-        <progress min="0" max="100" value="58"></progress>
-        <p>&lt;progress&gt; - Информация для акивногоражения хода выполнения операции</p>
-        <hr>
-        <dl>
-            <dt>FAQ - вопрос</dt>
-            <dd>
-                <p>FAQ - ответ</p>
-            </dd>
-        </dl>
-        <p>&lt;dt&gt;-&lt;dd&gt; - список FAQ</p>
-        <hr>
-    </article>
-    <article>
+        <fieldset>
+            <legend>Новые атрибуты элементов форм</legend>
 
-        <hr>
+            <label for="email">email</label>
+            <input type="email" name="email" placeholder="me@example.com">
+            <p>&lt;input type="email"&gt; - Поле для ввода электронной почты</p>
+            <hr>
+
+            <label for="url">url</label>
+            <input type="url" name="url" placeholder="example.com">
+            <p>&lt;input type="url"&gt; - Поле для ввода URL</p>
+            <hr>
+
+            <label for="range">range</label>
+            <input type="range" name="range" min="0" max="10" value="7">
+            <p>&lt;input type="range"&gt; - Ползунок</p>
+            <hr>
+
+            <label for="number">number</label>
+            <input type="number" step="0.25" name="number" min="0" max="10" value="7" placeholder="Ваше число">
+            <p>&lt;input type="number"&gt; - Поле для ввода числовых данных</p>
+            <hr>
+
+            <label for="color">color</label>
+            <input type="color" name="color">
+            <p>&lt;input type="color"&gt; - Поле для выбора цвета</p>
+            <hr>
+
+            <label for="date">date</label>
+            <input type="date" name="date" required>
+            <p>&lt;input type="date"&gt; - Поле для выбора даты (поддерживаютя month, week, datetime, datetime-local, time)</p>
+            <hr>
+
+            <input type="search" name="search" autofocus>
+            <p>&lt;input type="search"&gt; - Поле поиска, атрибут autofocus для автофокуса</p>
+            <hr>
+
+            <p contenteditable>этот текст можно редактировать</p>
+            <p>Атрибут "contenteditable" - Поддержка редактирования контента «на месте» в браузере.</p>
+            <hr>
+
+        </fieldset>
     </article>
 </section>
 
