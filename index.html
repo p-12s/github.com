@@ -7,14 +7,14 @@ layout: default
     <h1 class="post-heading">Разделы сайта</h1>
     <ul class="post-list">
         {% for page in site.pages %}
-        {% if page.layout == 'page' %}
-        <li>
-            <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
-            <h5>
-                <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a>
-            </h5>
-        </li>
-        {% endif %}
+            {% if page.layout == 'page' %}
+            <li>
+                <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
+                <h5>
+                    <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | escape }}</a>
+                </h5>
+            </li>
+            {% endif %}
         {% endfor %}
     </ul>
 
