@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HTML5 Form</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header class="header">
+            <hl>HTML5</hl>
+            <nav class="navigation navigation_header">
+                <a href="/">На главную</a>
+                <a href="/html5/">Новые теги HTML5</a>
+                <a href="/html5/audio-and-video.html">Аудио и видео</a>
+            </nav>
+            <hr>
+        </header>
+
+        <section class="content content_center">
+            <article>
+                <p>localStorage - Хранение данных в виде пар «ключ/значение» с привязкой к домену
+                    и сохранением данных между сеансами</p>
+                <hr>
+
+                <p>sessionStorage - Хранение данных в виде пар «ключ/значение» с привязкой к домену
+                    и уничтожением данных при завершении сеанса.</p>
+                <hr>
+
+                <p>Indexed.DB - Хранилище объектов, содержимое которого сохраняется между
+                    сеансами.</p>
+                <hr>
+
+                <p>Web SQL Databases - Полноценные реляционные базы данных с поддержкой создания
+                    таблиц, вставки, обновления, удаления, выборки и транзакций, с привязкой
+                    к домену и сохранением данных между сеансами. Технология
+                    исключена из активной спецификации.</p>
+                <hr>
+
+                <p>Offline Web Applications - Кэширование файлов для автономного использования; позволяет
+                    приложениям работать без подключения к Интернету.</p>
+                <hr>
+
+
+                <p>Пример сохранения настроек в браузере пользователя</p>
+                <form id="preferences" action="save_prefs" method="post" accept-charset="utf-8">
+                    <fieldset id="colors">
+                        <legend>Colors</legend>
+                        <ol>
+                            <li>
+                                <label for="background_color">Background color</label>
+                                <input class="color" type="color" name="background_color" id="background_color" value="#e8e9e9" />
+                            </li>
+                            <li>
+                                <label for="text_color">Text color</label>
+                                <input class="color" type="color" name="text_color" id="text_color" value="#333333" />
+                            </li>
+                            <li>
+                                <label for="text_size">Text size</label>
+                                <select name="text_size" id="text_size">
+                                    <option value="16">16px</option>
+                                    <option value="20">20px</option>
+                                    <option value="24">24px</option>
+                                    <option value="32">32px</option>
+                                </select>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <input type="submit" value="Save changes">
+                </form>
+
+            </article>
+        </section>
+
+        <footer class="footer">
+            <p>Copyright © 2017 p-12s.github.io</p>
+            <nav class="navigation navigation_footer">
+                <a href="/">На главную</a>
+                <a href="#">Тест</a>
+                <a href="#">Тест</a>
+                <a href="#">Тест</a>
+            </nav>
+        </footer>
+
+    </body>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="js/local-storage.js"></script>
+</html>
