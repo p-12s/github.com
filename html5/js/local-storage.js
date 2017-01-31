@@ -45,9 +45,9 @@ $('#preferences').submit(function(event){
 
 
 /************************ SESSION STORAGE - данные УДАЛяются после закрытия браузера/вкладки *************************/
+
 sessionStorage.setItem('name', 'Brian Hogan');
 var name = sessionStorage.getItem('name');
-
 
 /************************ INDEXED DB -  *************************/
 
