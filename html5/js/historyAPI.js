@@ -50,14 +50,22 @@ var configurePopState = function(){
 
 var activateDefaultTab = function(){
 
+    // Если значение location.hash отсутствует, мы присваиваем значение по умолчанию.
     var tab = window.location.hash || "Welcome";
     activateTab(tab);
+
+    // history. replaceState() используется для выбора вкладки. Он работает аналогично pushState(), но вместо добавления нового элемента заменяется текущий элемент.
     window.history.replaceState({tab: tab}, "", tab);
 };
 
 
+var init = function(){
+    configureTabSelection();
+    configurePopState();
+    activateDefaultTab();
+};
 
-
+init();
 
 
 
