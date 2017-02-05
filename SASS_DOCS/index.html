@@ -155,6 +155,27 @@
 </section>
 
 
+<section class="content content_top">
+    <article>
+        <header>Использование переменных</header>
+
+        <pre>
+<span>$name</span>: foo;
+<span>$attr</span>: border;
+
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+</pre>
+        компилируется в:
+        <pre>p.foo {
+    <span>border-color</span>: blue;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
 <footer class="footer">
     <p>Copyright © 2017 p-12s.github.io</p>
     <nav class="navigation navigation_footer">
