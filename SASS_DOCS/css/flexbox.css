@@ -1,0 +1,251 @@
+/*ПОВЕДЕНИЕ*/
+
+.flex-container-1 {
+    display: flex;                  /*блочный элемент*/
+    /*ПОРЯДОК ПО ОСЯМ*/
+    flex-direction: row;            /*обычное направление, слева-направо*/
+}
+
+.flex-container-2 {
+    display: inline-flex;                  /*инлайновый элемент*/
+}
+
+.flex-container-3 {
+    display: flex;
+    height: 320px;
+}
+
+.flex-container-4 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-container-5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-6 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex-container-7 {
+    display: flex;
+    flex-direction: row; /*default*/
+    flex-wrap: wrap;
+}
+
+.flex-container-8 {
+    display: flex;
+    flex-direction: row; /*default*/
+    flex-wrap: wrap-reverse;
+}
+
+.flex-container-9 {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-container-10 {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+
+.flex-container-11 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.flex-container-12 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.flex-container-13 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container-14 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container-15 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-container-16 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flex-container-16 > .flex-element:first-child {
+    margin-right: auto;
+}
+.flex-container-16 > .flex-element:last-child {
+    margin-left: auto;
+}
+.flex-container-16 > .flex-element:nth-child(4) {
+    margin: auto;
+}
+
+.flex-container-17 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-container-17 > .flex-element {
+    order: 0;
+    flex-grow: 0;
+}
+
+.flex-container-18 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-container-18 > .flex-element {
+    order: 0;
+    flex-grow: 1;
+}
+
+.flex-container-19 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-container-19 > .flex-element {
+    order: 0;
+    flex-grow: 1;
+}
+.flex-container-19 > .flex-element:nth-child(4) {
+    flex-grow: 2;
+}
+
+.flex-container-20 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-container-20 > .flex-element {
+    order: 0;
+    flex: 1 200px; /*flex-grow: 1; flex-basis: 200px;*/
+}
+
+.flex-container-21 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-container-21 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+.flex-container-21 > .flex-element:nth-child(2) {
+    flex: 2;
+}
+
+.flex-container-22 {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flex-container-22 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+
+.flex-container-23 {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.flex-container-23 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+
+.flex-container-24 {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-container-24 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+
+.flex-container-25 {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch; /*default*/
+}
+.flex-container-25 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+
+.flex-container-26 {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch; /*default*/
+}
+.flex-container-26 > .flex-element {
+    order: 0;
+    flex: 1;
+}
+.flex-container-26 > .flex-element:nth-child(1) {
+    align-self: flex-start;
+}
+.flex-container-26 > .flex-element:nth-child(5) {
+    align-self: flex-end;
+}
+.flex-container-26 > .flex-element:nth-child(3) {
+    align-self: center;
+}
+
+
+
+
+
+
+
+

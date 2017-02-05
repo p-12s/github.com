@@ -22,16 +22,138 @@
 <section class="content content_top">
 
     <article>
-        <header>
-            Удобная сокращенная запись свойств:
-        </header>
-        <pre>.flex-container {
-    <span>display</span>: flex;
+        <header>Вложенные свойства:</header>
+
+        <pre>.funky {
+  font: {
+    <span>family</span>: fantasy;
+    <span>size</span>: 30em;
+    <span>weight</span>: bold;
+  }
+}
+</pre>
+        
+        <pre>.funky {
+  <span>font</span>: 20px/24px fantasy {
+    <span>weight</span>: bold;
+  }
 }
 </pre>
     </article>
-
+    <hr>
 </section>
+
+<section class="content content_top">
+    <article>
+        <header>Шаблонные селекторы</header>
+
+        <pre>%for-grids {
+    <span>min-height</span>: 1px;
+    <span>position</span>: relative;
+    <span>padding-left</span>: 10px;
+    <span>padding-right</span>: 10px;
+    <span>margin-bottom</span>: 20px;
+}
+
+.sgrid-N {
+    <span>@extend</span> %for-grids;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Типы данных</header>
+
+        <pre>SassScript поддерживает семь основных типов данных:
+
+&ndash; числа (1.2, 13, 10px)
+&ndash; текстовые строки, с кавычками и без них ("foo", 'bar', baz)
+&ndash; цвета (blue, #04a3f9, rgba(255, 0, 0, 0.5))
+&ndash; булевы значения (true, false)
+&ndash; null
+&ndash; списки значений, с разделительными пробелами или запятыми (1.5em 1em 0 2em; Times New Roman, Arial, sans-serif)
+&ndash; массивы(мапы) (key1: value1, key2: value2)
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Списки</header>
+
+        <pre>// Узнаем значение элемента списка по индексу:
+    <span>nth(10px 20px 30px, 1)</span> => 10px
+    <span>nth((Helvetica, Arial, sans-serif), 3)</span> => sans-serif
+    <span>nth((width: 10px, length: 20px), 2)</span> => length, 20px
+</pre>
+        <pre>// Объединяем списки в один:
+    <span>join(10px 20px, 30px 40px)</span> => 10px 20px 30px 40px
+    <span>join((blue, red), (#abc, #def))</span> => blue, red, #abc, #def
+    <span>join(10px, 20px)</span> => 10px 20px
+</pre>
+        <pre>// Добавляем в список элементы:
+    <span>append(10px 20px, 30px)</span> => 10px 20px 30px
+    <span>append((blue, red), green)</span> => blue, red, green
+    <span>append(10px 20px, 30px 40px)</span> => 10px 20px (30px 40px)
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Мапы</header>
+
+        <pre>$status-colors</span>: (
+    <span>primary</span>: #000,
+    <span>success</span>: #27BA6C,
+    <span>info</span>: #03a9f4,
+    <span>warning</span>: #FF8833,
+    <span>danger</span>: #ff1a1a
+);
+
+<span>.message</span> {
+    @each $status, $color in $status-colors {
+        &--#{$status} {
+            <span>background</span>: $color;
+        }
+    }
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Операции с логическими значениями</header>
+
+        <pre>
+<span>$menuOn</span>: true;
+<span>$menuDropDown</span>: false;
+
+.menu li {
+    <span>color</span>: #ff0000;
+    <span>text-decoration</span>: underline;
+    @if $menuOn == true and $menuDropDown == true {
+        <span>position</span>: relative;
+    }
+}
+</pre>
+        компилируется в:
+        <pre>.menu li {
+    <span>color</span>: #ff0000;
+    <span>text-decoration</span>: underline;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
 
 <footer class="footer">
     <p>Copyright © 2017 p-12s.github.io</p>
