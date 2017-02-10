@@ -175,6 +175,266 @@ p.#{$name} {
     <hr>
 </section>
 
+<section class="content content_top">
+    <article>
+        <header>Директива @media</header>
+
+        <pre>
+<span>$media</span>: screen;
+<span>$feature</span>: -webkit-min-device-pixel-ratio;
+<span>$value</span>: 1.5;
+
+@media #{$media} and ($feature: $value) {
+  .sidebar {
+    <span>width</span>: 500px;
+  }
+}
+</pre>
+        компилируется в:
+        <pre>@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .sidebar {
+    <span>width</span>: 500px; }
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Директива @extend (наследование, include)</header>
+
+        <pre>.error {
+    <span>border</span>: 1px #f00;
+    <span>background-color</span>: #fdd;
+}
+.seriousError {
+    <span>@extend</span> .error;
+    <span>border-width</span>: 3px;
+}
+</pre>
+        компилируется в:
+        <pre>.error, .seriousError {
+    <span>border</span>: 1px #f00;
+    <span>background-color</span>: #fdd;
+}
+.seriousError {
+    <span>border-width</span>: 3px;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Селекторы расширения</header>
+<br>
+Данный набор правил не будет сгенерирован:
+        <pre>
+#context a%extreme {
+    <span>color</span>: blue;
+    <span>font-weight</span>: bold;
+    <span>font-size</span>: 2em;
+}
+</pre>
+        однако, если мы далее используем:
+        <pre>.notice {
+    <span>@extend</span> %extreme;
+}
+</pre>
+        набор правил будет скомпилирован в:
+        <pre>#context a.notice {
+    <span>color: blue</span>;
+    <span>font-weight</span>: bold;
+    <span>font-size</span>: 2em;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Директива @if</header>
+
+        <pre>
+<span>$type:</span> monster;
+p {
+  @if $type == ocean {
+    <span>color</span>: blue;
+  } @else if $type == matador {
+    <span>color</span>: red;
+  } @else if $type == monster {
+    <span>color</span>: green;
+  } @else {
+    <span>color</span>: black;
+  }
+}
+</pre>
+        компилируется в:
+        <pre>p {
+    <span>color</span>: green;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Директива @for</header>
+
+        <pre>
+@for <span>$i</span> from 1 through 3 {
+    .item-#{<span>$i</span>} { <span>width</span>: 2em *  <span>$i</span>; }
+}
+</pre>
+        компилируется в:
+        <pre>
+.item-1 {
+    <span>width</span>: 2em; }
+.item-2 {
+    <span>width</span>: 4em; }
+.item-3 {
+    <span>width</span>: 6em; }
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Директива @each</header>
+
+        <pre>
+@each <span>$animal</span> in puma, sea-slug {
+  .#{<span>$animal</span>}-icon {
+    <span>background-image</span>: url('/images/#{<span>$animal</span>}.png');
+  }
+}
+</pre>
+        компилируется в:
+        <pre>
+.puma-icon {
+    <span>background-image</span>: url('/images/puma.png'); }
+.sea-slug-icon {
+    <span>background-image</span>: url('/images/sea-slug.png'); }
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Множественные значения директивы @each</header>
+
+        <pre>
+@each <span>$animal</span>, <span>$color</span>, <span>$cursor</span> in (puma, black, default),
+                                (sea-slug, blue, pointer) {
+  .#{<span>$animal</span>}-icon {
+    <span>background-image</span>: url('/images/#{<span>$animal</span>}.png');
+    <span>border</span>: 2px solid $color;
+    <span>cursor</span>: $cursor;
+  }
+}
+</pre>
+        компилируется в:
+        <pre>
+.puma-icon {
+    <span>background-image</span>: url('/images/puma.png');
+    <span>border</span>: 2px solid black;
+    <span>cursor</span>: default; }
+.sea-slug-icon {
+    <span>background-image</span>: url('/images/sea-slug.png');
+    <span>border</span>: 2px solid blue;
+    <span>cursor</span>: pointer; }
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Директива @while</header>
+
+        <pre>
+<span>$i</span>: 6;
+@while <span>$i</span> > 0 {
+  .item-#{<span>$i</span>} { width: 2em * <span>$i</span>; }
+  <span>$i</span>: <span>$i</span> - 2;
+}
+</pre>
+        компилируется в:
+        <pre>
+.item-<span>6</span> { width: <span>12</span>em; }
+.item-<span>4</span> { width: <span>8</span>em; }
+.item-<span>2</span> { width: <span>4</span>em; }
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Аргументы по-умолчанию в миксине</header>
+
+        <pre>
+@mixin sexy-border($color, $width: 1in) {
+  <span>border</span>: {
+    <span>color</span>: $color;
+    <span>width</span>: $width;
+    <span>style</span>: dashed;
+  }
+}
+p { @include sexy-border(blue); }
+h1 { @include sexy-border(blue, 2in); }
+</pre>
+        компилируется в:
+        <pre>
+p {
+    <span>border-color</span>: blue;
+    <span>border-width</span>: 1in;
+    <span>border-style</span>: dashed; }
+
+h1 {
+    <span>border-color</span>: blue;
+    <span>border-width</span>: 2in;
+    <span>border-style</span>: dashed; }
+</pre>
+    </article>
+    <hr>
+</section>
+
+<section class="content content_top">
+    <article>
+        <header>Список в качестве аргумента в миксине</header>
+
+        <pre>
+@mixin box-shadow(<span>$shadows...</span>) {
+    <span>-moz-box-shadow</span>: $shadows;
+    <span>-webkit-box-shadow</span>: $shadows;
+    <span>box-shadow</span>: $shadows;
+}
+
+.shadows {
+    <span>@include</span> box-shadow(<span>0px 4px 5px #666, 2px 6px 10px #999</span>);
+}
+</pre>
+        компилируется в:
+        <pre>
+.shadows {
+    <span>-moz-box-shadow</span>: 0px 4px 5px #666, 2px 6px 10px #999;
+    <span>-webkit-box-shadow</span>: 0px 4px 5px #666, 2px 6px 10px #999;
+    <span>box-shadow</span>: 0px 4px 5px #666, 2px 6px 10px #999;
+}
+</pre>
+    </article>
+    <hr>
+</section>
+
+
+
 <footer class="footer">
     <p>Copyright © 2017 p-12s.github.io</p>
     <nav class="navigation navigation_footer">
