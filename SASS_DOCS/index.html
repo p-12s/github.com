@@ -422,7 +422,7 @@ h1 {
 }
 </pre>
         компилируется в:
-        <pre>
+<pre>
 .shadows {
     <span>-moz-box-shadow</span>: 0px 4px 5px #666, 2px 6px 10px #999;
     <span>-webkit-box-shadow</span>: 0px 4px 5px #666, 2px 6px 10px #999;
@@ -432,6 +432,54 @@ h1 {
     </article>
     <hr>
 </section>
+
+<section class="content content_top">
+    <article>
+        <header>Функции</header>
+
+        <pre>
+    <span>$grid-width</span>: 40px;
+    <span>$gutter-width</span>: 10px;
+
+@function grid-width($n) {
+  @return <span>$n</span> * <span>$grid-width</span> + (<span>$n</span> - 1) * <span>$gutter-width</span>;
+}
+
+#sidebar { <span>width</span>: grid-width(<span>5</span>); }
+</pre>
+        компилируется в:
+        <pre>
+#sidebar {
+    <span>width</span>: 240px; }
+</pre>
+    </article>
+    <hr>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
