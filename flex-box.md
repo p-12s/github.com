@@ -16,6 +16,6 @@ Visual Guides for Flexbox
 
 ## Flexbox
 
- 1. [Flexbox](/css3/fexbox.html)
- 2. [How to apply](/css3/fexbox_how_to_allply.html)
+ 1. [Flexbox](/FLEX-BOX/fexbox.html)
+ 2. [How to apply](/FLEX-BOX/fexbox_how_to_allply.html)
  
