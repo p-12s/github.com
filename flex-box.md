@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CSS3"
-permalink: /css3/
+title: "FLEX-BOX"
+permalink: /FLEX-BOX/
 ---
 
 Visual Guides for Flexbox
