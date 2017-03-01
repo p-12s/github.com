@@ -1,0 +1,188 @@
+/*стили для страницы*/
+
+.clearfix:after {
+    content: ' ';
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.35em;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    background: #e8e9e9;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+h1 {
+    color: #555;
+}
+
+.common-view {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 45px auto;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+
+.flex-element {
+    color: #fff;
+    padding: 15px;
+    margin: 5px;
+    background: firebrick;
+    border-radius: 3px;
+}
+
+
+
+pre {
+    border: 1px dashed #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+    background:#fff;
+    color:#000;
+}
+
+pre > span {
+    color:#a535ae;
+}
+
+pre.type-html > span {
+    color: #00a33f;
+}
+
+hr {
+    margin-top: 50px;
+}
+
+.code-type {
+    font-size: 18px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+.type-css {
+    color: #2a0cc5;
+}
+
+.type-html {
+    color: #a52d10;
+}
+
+/* html5 style */
+.content-image {
+    width: 70%;
+    margin: 10px auto;
+    display: block;
+}
+.link {
+    display: block;
+}
+.footer {
+    display: flex;
+}
+.navigation.navigation_footer {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.navigation.navigation_footer a {
+    margin-left: 10px;
+}
+
+.content_left {
+    border: 1px  solid #2a0cc5;
+    flex-direction: column;
+}
+.content_right {
+    border: 1px  solid #2a0cc5;
+    flex-direction: column;
+}
+.article {
+    padding: 10px;
+    border: 1px  solid #333;
+}
+
+p[contenteditable]:hover,
+p[contenteditable]:focus {
+    background: #ffa;
+}
+
+/************* IndexDB ************/
+#container {
+    margin: 0 auto;
+    width: 80%;
+}
+#container:after {
+    clear: both;
+    content: ' ';
+    display: block;
+}
+
+#sidebar, #main{
+    display: block;
+    float: left;
+}
+#main{
+    width: 80%;
+}
+#sidebar{
+    width: 20%;
+}
+form ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+form li,
+#sidebar li {
+    margin: 0;
+    padding: 0;
+}
+form li label{
+    display:block;
+}
+#note,
+#title{
+    border: 1px solid #000;
+    font-size: 20px;
+    width: 100%;
+}
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+#sidebar li{
+    cursor: hand;
+    cursor: pointer;
+}
+#title{
+    height: 20px;
+}
+#note{
+    height: 80px;
+}
+
+.rule-description {
+    border-left: 1px solid #2ec522;
+    padding: 10px;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+    background: #fff;
+    color: #000;
+}
+
+
+
+
+
