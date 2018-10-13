@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "C#"
-permalink: /c#/
+permalink: /c-sharp/
 ---
 
  
