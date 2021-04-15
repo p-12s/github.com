@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "SASS DOCS"
-permalink: /SASS_DOCS/
+permalink: /archive/SASS_DOCS/
 ---
 
 Выжимка из [ресурса](https://sass-scss.ru/documentation/)
 
 ##  Новые теги
 
- 1. [Прикольное укорачивание записи](/SASS_DOCS/index.html)
+ 1. [Прикольное укорачивание записи](/archive/SASS_DOCS/index.html)
  

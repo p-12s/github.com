@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Rewrites"
-permalink: /rewrites/
+permalink: /archive/rewrites/
 ---
 
 [Источник](https://habrahabr.ru/company/sprinthost/blog/129560/)

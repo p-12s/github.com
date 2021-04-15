@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "Linux commands"
-permalink: /linux/
+permalink: /archive/linux/
 ---
 
 Выжимка из [ресурса](https://sass-scss.ru/documentation/)
 
 ##  Новые теги
 
- 1. [Прикольное укорачивание записи](/SASS_DOCS/index.html)
+ 1. [Прикольное укорачивание записи](/archive/SASS_DOCS/index.html)
  

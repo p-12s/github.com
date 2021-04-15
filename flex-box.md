@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "FLEX-BOX"
-permalink: /FLEX-BOX/
+permalink: /archive/FLEX-BOX/
 ---
 
 Visual Guides for Flexbox
@@ -16,6 +16,6 @@ Visual Guides for Flexbox
 
 ## Flexbox
 
- 1. [Flexbox](/FLEX-BOX/fexbox.html)
- 2. [How to apply](/FLEX-BOX/fexbox_how_to_allply.html)
+ 1. [Flexbox](/archive/FLEX-BOX/fexbox.html)
+ 2. [How to apply](/archive/FLEX-BOX/fexbox_how_to_allply.html)
  
